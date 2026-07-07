@@ -122,3 +122,45 @@ g = \frac{3 N m_0(\chi) c^2}{4\pi R^4}
 
 其中  \Phi_{bloq} = \exp\left[-\beta \|G_{bloq} - G_{mat}\|^2\right]  是填补经典热声学空白的核心，将其从经验工艺转变为精密工程。
 [在此处插入您的联系方式]
+second model
+# 精密声学制冷：数据中心热力学管理系统
+
+**作者：** Bruno Henrique do Couto Farias  
+**日期：** 2026年7月  
+**语言：** 普通话  
+
+> **⚠️ 保密声明 / Confidentiality Notice**  
+> 本文档仅用于技术评估与合作洽谈。核心参数（β, η）及完整实验协议受知识产权保护，将在签署NDA后提供完整版本。  
+> *Este documento é apenas para avaliação técnica e discussão de parceria. Parâmetros centrais (β, η) e protocolos experimentais são protegidos por IP e serão fornecidos na versão completa após assinatura de NDA.*
+
+---
+
+## 1. 执行摘要
+
+本文件提出一种基于**三维协同声学制冷架构**的颠覆性数据中心热管理方案。与传统系统被动消耗大量能源驱逐热量不同，本技术通过在三维空间内使用精确校准的声学驻波，主动重组并导出芯片级产生的热熵。该方案在热力学上完全自洽，旨在彻底消除过热点（Hotspots），并将能源使用效率（PUE）降至接近1.0。
+
+## 2. 热力学框架
+
+### 2.1 能量守恒（第一定律）
+$$ P_{in} = P_{hardware} + W_{ac} + \dot{Q}_{loss} $$
+
+### 2.2 熵管理与第二定律合规性
+本系统并不“破坏”热量，而是通过声波耦合主动将其从关键组件中导出至外部储热装置：
+
+$$ \dot{S}_{exported} = \frac{\eta \cdot \Phi_{conv} \cdot \rho_0 \cdot |\vec{V}_{ac}|^2}{T_{exp}} $$
+
+该方程量化了由声场向温度为 $T_{exp}$ 的外部环境驱动的相干熵流，严格符合热力学第二定律。
+
+### 2.3 转换因子（$\Phi_{conv}$）—— 系统核心
+$\Phi_{conv}$ 衡量声源几何形状（$G_{src}$）与服务器机架几何形状（$G_{rack}$）之间的兼容性：
+
+$$ \Phi_{conv} = \exp[-\beta \cdot \|G_{src} - G_{rack}\|^2] $$
+
+当声场与目标区域完美耦合时，相干性达到峰值，从而实现最大热通量传输效率。
+
+## 3. 关键性能指标 (KPIs)
+
+### 3.1 热相干指数 (ICT)
+$$ ICT = \frac{\dot{S}_{exported}}{\dot{S}_{generated}} $$
+
+-   **ICT < 1:** 热量积聚状态。需增加声功率或重新校准 
